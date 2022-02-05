@@ -8,19 +8,22 @@ class UseWid extends StatefulWidget {
 }
 
 class _UseWidState extends State<UseWid> {
+  // Crea un controlador de texto. Lo usaremos para recuperar el valor actual
+  // del TextField!
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Widgets"),
-      ),
-      body: mensaje(),
+      // appBar: AppBar(
+      //   title: Text("Widgets"),
+      // ),
+      body: mensaje(context),
     );
   }
 }
 
 //Wifget creado para manejar unicamente la configuracion para el widget o lo que queremos mostrar
-Widget mensaje() {
+Widget mensaje(context) {
   return Container(
     decoration: BoxDecoration(
         image: DecorationImage(
@@ -35,8 +38,12 @@ Widget mensaje() {
         nombre(),
         camposUsuarios(),
         campoPassword(),
-        botonAceptar(),
-        botonCancelar()
+        //Sirve para hacer saltos de espacio en las pantallas
+        SizedBox(
+          height: 10,
+        ),
+        botonAceptar(context),
+        botonCancelar(context)
       ],
     )),
   );

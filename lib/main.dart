@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_separete/principal/principal.dart';
 import 'package:flutter_widget_separete/principal/useWid.dart';
 
 void main() {
@@ -8,6 +9,6 @@ void main() {
 class UsoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: "ClaseWidgets", home: UseWid());
+    return MaterialApp(title: "ClaseWidgets", home: Principal());
   }
 }
